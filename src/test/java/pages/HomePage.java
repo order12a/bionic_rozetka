@@ -1,6 +1,5 @@
 package pages;
 
-
 import utils.Log4Test;
 
 public class HomePage extends GeneralPage {
@@ -23,6 +22,11 @@ public class HomePage extends GeneralPage {
         elementIsLocated(getLocator("searchField")).clear();
         elementIsLocated(getLocator("searchField")).sendKeys(productName);
         elementIsLocated(getLocator("searchButton")).click();
+    }
+
+    public void goToLaptopsSection(){
+        Log4Test.info("Navigating to laptops section");
+        elementIsLocated(getLocator("laptopsLink")).click();
     }
 }
 

@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="FirstTestSuite" verbose="1">
+    <parameter name="expectedCount" value="2"/>
+
+    <test name="SmokeTest">
+        <classes>
+
+            <class name="ui_tests.SmartphoneSearchTest"/>
+            <!--<class name="selenium_cookbook.data_driven_testing.TestNGDDT"/>-->
+        </classes>
+    </test>
+    <test name="SmokeTestTwo">
+        <classes>
+
+            <class name="ui_tests.MacBookSearchTest"/>
+            <!--<class name="selenium_cookbook.data_driven_testing.TestNGDDT"/>-->
+        </classes>
+    </test>
+</suite>

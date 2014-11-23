@@ -4,6 +4,7 @@ import core.TestBase;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import utils.Log4Test;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -16,10 +17,17 @@ public class GeneralPage extends TestBase {
     public void open(String URL)
 
     {
-
         webDriver.get(URL);
-
     }
+
+    /*
+     *This method is used to check URL and Title of the page
+      */
+    public boolean checkPageOpened(String URL, String title){
+
+        return webDriver.getCurrentUrl().equals(URL) & webDriver.getTitle().contains(title);
+    }
+
 
     public void logOut()
 
@@ -61,6 +69,7 @@ public class GeneralPage extends TestBase {
 
         try {
             wait.until(expectation);
+            Log4Test.info("Waiting for page load");
         } catch (Throwable error) {
             assertFalse("Timeout waiting for Page Load Request to complete.", true);
         }

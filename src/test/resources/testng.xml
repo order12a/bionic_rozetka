@@ -6,8 +6,14 @@
     <test name="SmokeTest">
         <classes>
 
-
             <class name="ui_tests.SmartphoneSearchTest"/>
+            <!--<class name="selenium_cookbook.data_driven_testing.TestNGDDT"/>-->
+        </classes>
+    </test>
+    <test name="SmokeTestTwo">
+        <classes>
+
+            <class name="ui_tests.MacBookSearchTest"/>
             <!--<class name="selenium_cookbook.data_driven_testing.TestNGDDT"/>-->
         </classes>
     </test>

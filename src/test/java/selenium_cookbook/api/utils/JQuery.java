@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
+import utils.Log4Test;
 
 import java.util.Arrays;
 import java.util.List;
@@ -31,10 +32,10 @@ public class JQuery {
 
         List<WebElement> elements = (List<WebElement>) js.executeScript("return jQuery.find(':checked')");
 
-        for (WebElement element : elements)
+        for (WebElement element : elements) {
             assertTrue(checked.contains(element.getAttribute("id")));
+            Log4Test.info(element.getAttribute("id"));
+        }
 
     }
-
-
 }
